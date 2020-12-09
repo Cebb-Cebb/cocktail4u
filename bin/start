@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
 require_relative "../lib/enviroment"
-Cli.new.run
+CLI.new.run
