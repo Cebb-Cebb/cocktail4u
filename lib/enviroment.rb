@@ -1,6 +1,7 @@
 require 'pry'
 require "net/http"
 require "open-uri"
+require "json"
 require_relative "./cocktail4u/version"
 require_relative "./api"
 require_relative "./cli"
