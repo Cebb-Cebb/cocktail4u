@@ -13,6 +13,7 @@ class API
             ingredients.compact.each do |i|
               object = Ingredient.new(i)
               cocktail.ingredients << object
+              object.cocktails << cocktail
             end
         end
         binding.pry 

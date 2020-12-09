@@ -5,11 +5,11 @@ class CLI
     end
     
     def welcome
-        puts "Welcome"
+        puts "Welcome to Alchy!"
     end 
 
     def ingredient_selection
-        puts "type an ingredient you want to build a cocktail with"
+        puts "Before you get all alchy, type an ingredient you want to build a cocktail with..."
         input = gets.strip.downcase
         API.find_cocktail_by_ingredient(input)
     end 
