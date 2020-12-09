@@ -2,6 +2,8 @@ class Cocktail
 
     @@all =[]
 
+    attr_accessor :ingredients
+
     def self.all
         @@all
     end
