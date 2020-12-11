@@ -14,7 +14,7 @@ class API
             ingredients.compact.each do |i|
               object = Ingredient.find_or_create_by_name(i)
               cocktail.ingredients << object
-              object.cocktails << cocktail
+            #   object.cocktails << cocktail
             end
         end
         # binding.pry 
