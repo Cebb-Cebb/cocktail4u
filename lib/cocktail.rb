@@ -1,4 +1,4 @@
-class Cocktail
+class Cocktail 
 
     @@all =[]
 
