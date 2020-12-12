@@ -19,7 +19,7 @@ class CLI
         @input = gets.strip.downcase
         @maybe_nil = API.find_cocktail_by_ingredient(@input)
         if !@maybe_nil      
-            puts " Real Alchee's dont use that ingredient, please try another one."  
+        puts "Real Alchee's dont use that ingredient, please try another one."  
             ingredient_selection
         end 
     end 
@@ -29,10 +29,10 @@ class CLI
         @cocktails.each.with_index(1) do |cocktail, i| 
             puts "#{i}. #{cocktail.name}"
         end 
-        puts "If you want to exit type exit, if you want to select a cocktail enter its number or if you would like to select a different ingredient type ingredient"
-        
+        puts "#####################################################################################################################################################"
+        puts "If you want to EXIT type exit, if you want to SELECT a cocktail enter its number or if you would like to select a DIFFERENT ingredient type ingredient"
     end
-    
+           
     def user_selection
         @cocktail_input = gets.strip.downcase 
         if @cocktail_input == "exit"
@@ -43,7 +43,7 @@ class CLI
             @cocktail = @cocktails[@cocktail_input.to_i - 1]
             display_cocktail
         else 
-            puts "Someone is wavy =) Wrong input please type a number from 1 to #{@cocktails.length}"
+            puts "WRONG input please type a NUMBER from 1 to #{@cocktails.length}"
             user_selection
         end 
     end 
@@ -55,32 +55,16 @@ class CLI
             puts ingredient.name
         end  
         puts @cocktail.instructions
+        puts "####################################"
+        puts "To see PREVIOUS COCKTAIL list type back, otherwise TYPE exit"
+        # typing back returns the objects_id, i want to hide them?
+        #  it also exits the progra but i want to be able to loop as many times though the list until user exits
         @cocktail_input = gets.strip.downcase 
-        if @cocktail_input == "exit"
-            puts "Goodbye!"
-        elsif @cocktail_input == "back"
-
-        puts "type back to see previous list of cocktails, otherwise type ingredient to see a new collection of cocktails using a new ingredient"
-
-    end
-
-
-
-    
-    
-
-
-            
-
-
-
-
-
-
-    # def find_or_create_by_name
-    #     input = gets.strip.downcase
-    #     API.find_or_create_by_name(input)
-    # end 
-
-
+        if @cocktail_input == "back"
+        puts @cocktails = Cocktail.all
+            @cocktails.each.with_index(1) do |cocktail, i| 
+                puts "#{i}. #{cocktail.name}"
+            end 
+        end
+    end 
 end 
