@@ -15,7 +15,6 @@ class Cocktail
         end 
         self.ingredients = []
         self.class.all << self
-
     end 
 
     def self.find_by_name(name)
@@ -25,6 +24,5 @@ class Cocktail
     def self.find_or_create_by_name(hash)
         self.find_by_name(hash[:name]) || self.new(hash)
     end 
-
-
 end 
+
