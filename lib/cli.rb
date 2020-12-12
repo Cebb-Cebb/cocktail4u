@@ -56,9 +56,11 @@ class CLI
         end  
         puts @cocktail.instructions
         @cocktail_input = gets.strip.downcase 
-        # if @cocktail_input == "exit"
-        #     puts "Goodbye!"
-        # puts "if you want to go back type back otherwise type ingredient to see a new collection of cocktails using your ingredient"
+        if @cocktail_input == "exit"
+            puts "Goodbye!"
+        elsif @cocktail_input == "back"
+
+        puts "type back to see previous list of cocktails, otherwise type ingredient to see a new collection of cocktails using a new ingredient"
 
     end
 
