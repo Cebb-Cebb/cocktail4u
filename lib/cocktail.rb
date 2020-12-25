@@ -18,9 +18,9 @@ class Cocktail
         # binding.pry 
     end 
         
-    def self.find_by_category(category_input)
-        self.all.find_all {|cocktail| cocktail.category == category_input}
-    end
+    # def self.display_by_category
+    #     self.all.find_all {|cocktail| cocktail.category}
+    # end
 
     def self.find_by_name(name)
         self.all.index{|ingredient_object| ingredient_object.name == name} 
