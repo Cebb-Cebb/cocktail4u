@@ -15,7 +15,6 @@ class Cocktail
         end 
         self.ingredients = []
         self.class.all << self
-        # binding.pry 
     end 
         
     def self.display_by_category

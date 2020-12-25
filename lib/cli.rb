@@ -65,8 +65,6 @@ class CLI
         end  
         puts @cocktail.instructions
         puts @cocktail.category 
-        # puts @cocktail.category 
-        # binding.pry 
         puts "####################################"
         puts "To see PREVIOUS COCKTAIL list type back, otherwise TYPE exit".red
         @cocktail_input = gets.strip.downcase 
