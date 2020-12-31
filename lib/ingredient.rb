@@ -8,7 +8,7 @@ class Ingredient
         @@all
     end
       
-    def initialize(name)  
+    def initialize(name) 
         self.name = name 
         self.cocktails = []
         self.class.all << self

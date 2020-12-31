@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 require_relative "../lib/enviroment"
-CLI.new.run
+something = CLI.new
+something.run

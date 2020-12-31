@@ -1,0 +1,13 @@
+=> [32m#<Cocktail:0x0000559b3281b078[0m
+ @category[32m=[0m[31m[1;31m"[0m[31mOrdinary Drink[1;31m"[0m[31m[0m,
+ @id[32m=[0m[31m[1;31m"[0m[31m12093[1;31m"[0m[31m[0m,
+ @ingredients[32m=[0m
+  [[32m#<Ingredient:0x0000559b3281a7e0[0m @cocktails[32m=[0m[], @name[32m=[0m[31m[1;31m"[0m[31mLight rum[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<Ingredient:0x0000559b3281a740[0m @cocktails[32m=[0m[], @name[32m=[0m[31m[1;31m"[0m[31mLemon juice[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<Ingredient:0x0000559b3281a6a0[0m @cocktails[32m=[0m[], @name[32m=[0m[31m[1;31m"[0m[31mSugar[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<Ingredient:0x0000559b3281a600[0m @cocktails[32m=[0m[], @name[32m=[0m[31m[1;31m"[0m[31mOrange[1;31m"[0m[31m[0m[32m>[0m,
+   [32m#<Ingredient:0x0000559b3281a560[0m @cocktails[32m=[0m[], @name[32m=[0m[31m[1;31m"[0m[31mMaraschino cherry[1;31m"[0m[31m[0m[32m>[0m],
+ @instructions[32m=[0m
+  [31m[1;31m"[0m[31mIn a shaker half-filled with ice cubes, combine the rum, lemon juice, and sugar. Shake well. Strain into a sour glass and garnish with the orange slice and the cherry.[1;31m"[0m[31m[0m,
+ @name[32m=[0m[31m[1;31m"[0m[31mRum Sour[1;31m"[0m[31m[0m,
+ @type[32m=[0m[31m[1;31m"[0m[31mAlcoholic[1;31m"[0m[31m[0m[32m>[0m

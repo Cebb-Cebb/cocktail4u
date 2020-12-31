@@ -7,33 +7,43 @@ class CLI
     def welcome
         puts "******************".white
         puts "******************".white
-        puts "Welcome to Alchee!".red
+        puts "Welcome to Alchy!".red
         puts "******************".white
         puts "******************".white
         ingredient_selection
     end 
 
     def ingredient_selection
-        puts "Please type an ingredient you want to get to get Alchee with...otherwise TYPE exit".red 
+        puts "Please type an ingredient you want to get to get Alchy with or for secret menu hit enter...otherwise TYPE exit".red 
         @input = gets.strip.downcase
-        @maybe_nil= Ingredient.find_by_name(@input) ? Ingredient.find_by_name(@input) : API.find_cocktail_by_ingredient(@input)
+        
+        # low level conditional 
+        # if Ingredient.find_by_name(@input)
+        # @ingredient =  Ingredient.find_by_name(@input)
+        # elsif
+        # @ingredient = API.find_cocktail_by_ingredient(@input)
+        # else 
+            
+        # end 
+
+        @ingredient = Ingredient.find_by_name(@input) ? Ingredient.find_by_name(@input) : API.find_cocktail_by_ingredient(@input)
         if @input != "exit"          
-            if !@maybe_nil      
-                puts "Real Alchee's dont use that ingredient, please try another one."  
+            if !@ingredient      
+                puts "Real Alchys dont use that ingredient, please try another one."  
                 ingredient_selection
             end 
+            # binding.pry
             display_cocktails
         else
             goodbye
         end 
     end 
-
-    def display_cocktails
+                
+     def display_cocktails
         @cocktails = Cocktail.all
         @cocktails.each.with_index(1) do |cocktail, i| 
             puts "#{i}. #{cocktail.name}"
         end
-        # binding.pry 
         puts "#####################################################################################################################################################"
         puts "If you want to EXIT type exit, if you want to SELECT a cocktail enter its number or if you would like to select a DIFFERENT ingredient type ingredient".red
         user_selection
@@ -44,7 +54,7 @@ class CLI
         if @cocktail_input == "exit"
             goodbye
         elsif @cocktail_input == "ingredient" 
-            run  
+            welcome  
         elsif @cocktail_input.to_i.between?(1, @cocktails.length)
             @cocktail = @cocktails[@cocktail_input.to_i - 1]
             display_cocktail
@@ -55,21 +65,29 @@ class CLI
     end 
 
     def goodbye
-        puts "Goodbye!".red
+        puts "Goodbye. Please come back soon!".red
     end 
 
     def display_cocktail
+        puts "Name:".red 
         puts @cocktail.name
+        puts "Ingredients:".red
         @cocktail.ingredients.each do |ingredient| 
             puts ingredient.name
         end  
+        puts "Instructions:".red 
         puts @cocktail.instructions
+        puts "Category:".red
         puts @cocktail.category 
+        puts "Type:".red
+        puts @cocktail.type 
         puts "####################################"
         puts "To see PREVIOUS COCKTAIL list type back, otherwise TYPE exit".red
         @cocktail_input = gets.strip.downcase 
         if @cocktail_input == "back"
             display_cocktails
+        else @cocktail_input == "exit"
+            goodbye
         end
     end 
 end 
