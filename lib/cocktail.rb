@@ -52,19 +52,19 @@ class Cocktail
         end 
     end 
 
-         low level iterator      
-         non_alcoholic = []
-         binding.pry 
-          self.all.each do |c| 
-            # Check the type of the cocktail; if appropriate, push that cocktail to the non_alcoholic
-            if c.type == "Non alcoholic"
-                non_alcoholic << c 
-            end 
+        #  low level iterator      
+        #  non_alcoholic = []
+        #  binding.pry 
+        #   self.all.each do |c| 
+        #     # Check the type of the cocktail; if appropriate, push that cocktail to the non_alcoholic
+        #     if c.type == "Non alcoholic"
+        #         non_alcoholic << c 
+        #     end 
 
 
-        THis method will return an array of all the cocktail objects that are non-alcoholic
-        end 
-        non_alcoholic
-    end 
+        # THis method will return an array of all the cocktail objects that are non-alcoholic
+    #     end 
+    #     non_alcoholic
+    # end 
 end 
 
